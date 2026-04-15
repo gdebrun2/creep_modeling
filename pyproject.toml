@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mimosa-utils"
+version = "0.1.0"
+description = "Python utilities for orchestrating LS-EVPFFT runs and post-processing outputs"
+readme = "docs/codebase_reference.md"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy",
+  "pandas",
+  "matplotlib",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["utils*"]
+namespaces = true
